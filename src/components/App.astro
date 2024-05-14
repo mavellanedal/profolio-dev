@@ -8,12 +8,14 @@ import Projects from "../components/Projects.astro";
 import ProfileIcon from "../icons/ProfileIcon.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
+
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
 ---
 
-<Layout
-  title="Porfolio Miquel Avellaneda - Especialista en Microsistemas Informáticos y Redes, además de Desarrollador Web"
-  description="Contrata a Miquel Avellaneda para controlar toda tu infraestructura informática y para desarrollar páginas y aplicaciones web. Administrador de Sistemas Microinformáticos y Redes y Desarrollador Web. Especializado en microsistemas informáticos y Redes y Desarrollador Web."
->
+<Layout title={i18n.SEOTITLE} description={i18n.SEODESCRIPTION}>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />
@@ -25,7 +27,7 @@ import Hero from "../components/Hero.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <BriefCaseIcon class="size 7" />
-        Experiencia laboral
+        {i18n.EXPERIENCETITLE}
       </h2>
       <Experience />
     </SectionContainer>
@@ -35,7 +37,7 @@ import Hero from "../components/Hero.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <LaptopIcon class="size 7" />
-        Proyectos
+        {i18n.PROJECTSTITLE}
       </h2>
       <Projects />
     </SectionContainer>
@@ -44,7 +46,7 @@ import Hero from "../components/Hero.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
       >
         <ProfileIcon class="size-8" />
-        Sobre mí
+        {i18n.ABOUTMETITLE}
       </h2>
       <AboutMe />
     </SectionContainer>

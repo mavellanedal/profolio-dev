@@ -6,6 +6,7 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
+  site: 'mavellaneda.me',
   i18n: { 
     defaultLocale: 'es', 
     locales: ['es', 'en', 'ca'],
