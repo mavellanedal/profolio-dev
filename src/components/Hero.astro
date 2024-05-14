@@ -37,13 +37,14 @@ const i18n = getI18n({ currentLocale });
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-blue-400 [&>strong]:font-semibold dark:text-gray-300"
   >
-    <strong>{i18n.HEROTEXT1}</strong> De Barcelona, Cataluña, España. <br /><br
-    />Especializado en ofrecer la mejor solución.
+    <strong>{i18n.HEROTEXT1}</strong>
+    {i18n.HEROTEXT2}
+    <br /><br />{i18n.HEROTEXT3}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:miavluofficial@gmail.com">
       <MailIcon class="size-4" />
-      Contáctame
+      {i18n.CONTACTTITLE}
     </SocialPill>
     <SocialPill href="https://www.linkedin.com/in/mavellaneda/">
       <LinkedIn class="size-4" />

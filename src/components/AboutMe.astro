@@ -1,5 +1,10 @@
 ---
 const personalImageAlt = "Miquel Avellaneda";
+
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
 ---
 
 <article
@@ -10,15 +15,12 @@ const personalImageAlt = "Miquel Avellaneda";
   >
     <p>
       <p>
-        Empecé en la informática desde bien pequeño, cuando tenía 10 años.
-        Actualmente, estoy <strong
-          >finalizando un ciclo de microsistemas informáticos y redes</strong
-        >, para posteriormente hacer un ciclo de diseño de aplicaciones web.
+        {i18n.ABOUTMETEXT1}
+        <strong>{i18n.ABOUTMETEXT2}</strong>, {i18n.ABOUTMETEXT3}
       </p>
 
       <p>
-        De muchos de los proyectos que he realizado en mi etapa como estudiante
-        de microsistemas, quiero recalcar:
+        {i18n.ABOUTMETEXT4}
       </p>
 
       <ul
@@ -27,45 +29,37 @@ const personalImageAlt = "Miquel Avellaneda";
         <li
           class="[&>strong]:text-blue-400 dark:[&>strong]:text-yellow-400 py-1 [&>strong]:font-normal [&>strong]:font-mono"
         >
-          <strong>Montaje de un ordenador</strong> de sobremesa, eligiendo los componentes
-          más adecuados para el cliente.
+          <strong>{i18n.ABOUTMETEXT5}</strong>
+          {i18n.ABOUTMETEXT6}
         </li>
         <li
           class="[&>strong]:text-blue-400 dark:[&>strong]:text-yellow-400 py-1 [&>strong]:font-normal [&>strong]:font-mono"
         >
-          <strong>Sistemas DualBoot</strong>, para ofrecer dos sistemas
-          operativos para un solo servidor.
+          <strong>{i18n.ABOUTMETEXT7}</strong>{i18n.ABOUTMETEXT8}
         </li>
         <li
           class="[&>strong]:text-blue-400 dark:[&>strong]:text-yellow-400 py-1 [&>strong]:font-normal [&>strong]:font-mono"
         >
-          <strong>Diseño y cableado de una red local</strong>, para un
-          instituto.
+          <strong>{i18n.ABOUTMETEXT9}</strong>{i18n.ABOUTMETEXT10}
         </li>
         <li
           class="[&>strong]:text-blue-400 dark:[&>strong]:text-yellow-400 py-1 [&>strong]:font-normal [&>strong]:font-mono"
         >
-          <strong>Limpieza y mantenimiento de ordenadores</strong> para posteriormente
-          donarlos a una escuela con pocos recursos.
+          <strong>{i18n.ABOUTMETEXT11}</strong>
+          {i18n.ABOUTMETEXT12}
         </li>
         <li
           class="[&>strong]:text-blue-400 dark:[&>strong]:text-yellow-400 py-1 [&>strong]:font-normal [&>strong]:font-mono"
         >
-          <strong>Diseño, cableado y servidor</strong> para una escuela con pocos
-          recursos.
+          <strong>{i18n.ABOUTMETEXT13}</strong>
+          {i18n.ABOUTMETEXT14}
         </li>
       </ul>
 
       <p>
-        Uno de mis trabajos personales más interesantes es <strong
-          >la programación mediante una Arduino para conseguir digitalizar
-          imágenes de la Game Boy Camera.</strong
-        > Un aparato del que originalmente solo se podían imprimir las imágenes.
-        Con este experimento, he podido colaborar con fotógrafos para crear un contenido
-        distinto y original.
+        {i18n.ABOUTMETEXT15}<strong>{i18n.ABOUTMETEXT16}</strong>
+        {i18n.ABOUTMETEXT17}
       </p>
-
-      <!-- <p>Como estudiante, <strong>cuento con unos resultados muy satisfactorios en mi campo de <em class="italic">la informática y la programación </em>en mi instituto</strong>, mi objetivo es sacar los mejores resultados para ampliar mis conocimientos.</p> -->
     </p>
   </div>
   <img

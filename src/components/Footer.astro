@@ -1,5 +1,9 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
 ---
 
 <footer
@@ -10,18 +14,21 @@ const currentYear = new Date().getFullYear()
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://www.linkedin.com/in/mavellaneda/" class="hover:underline">Miquel Avellaneda</a>. Casi
-      todos los derechos reservados
+      <a href="https://www.linkedin.com/in/mavellaneda/" class="hover:underline"
+        >Miquel Avellaneda</a
+      >{i18n.FOOTERTEXT}
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="#top" class="hover:underline me-4 md:me-6">Inicio</a>
+        <a href="#top" class="hover:underline me-4 md:me-6"
+          >{i18n.FOOTERLINK1}</a
+        >
       </li>
       <li>
         <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline"
-          >Contacto</a
+          >{i18n.FOOTERLINK2}</a
         >
       </li>
     </ul>

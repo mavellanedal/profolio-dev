@@ -1,33 +1,40 @@
 ---
-import Link from "../icons/Link.astro"
-import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCIE = [
-        {
-                date: 'Diciembre 2023 − marzo 2024',
-                title: 'Consultor informático − Onligy Consulting',
-                company: "Onligy Consulting",
-                description: 'Posteriormente a la FP fui contratado en la empresa para administrar servidores, redes, hoteleras, bases de datos y páginas web.',  
-        },
-        {
-                date: 'Julio 2023 − diciembre 2023',
-                title: 'Becario consultoría informática − Onligy Consulting',
-                company: "Onligy Consulting",
-                description: 'Becario en la consultoría informática de Onligy Consulting. Aprendí a administrar todo tipo de redes, controles de acceso a tratar con clientes y sobre mantenimiento de hardware.',
-        },
-        {
-                date: 'Septiembre 2021 − junio 2023',
-                title: 'Entrenador infantil − Entrenador Atletismo',
-                description: 'Entrenador infantil de atletismo en club de atletismo.',
-        },
-]
----
-<ol class="relative mt-16">
-    {
-      EXPERIENCIE.map((experiencie) => (
-        <li class="">
-          <ExperienceItem {...experiencie} />
-        </li>
-      ))
-    }
-  </ol>
+import Link from "../icons/Link.astro";
+import ExperienceItem from "./ExperienceItem.astro";
 
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
+const EXPERIENCIE = [
+  {
+    date: "Diciembre 2023 − marzo 2024",
+    title: "Consultor informático − Onligy Consulting",
+    company: "Onligy Consulting",
+    description:
+      "Posteriormente a la FP fui contratado en la empresa para administrar servidores, redes, hoteleras, bases de datos y páginas web.",
+  },
+  {
+    date: "Julio 2023 − diciembre 2023",
+    title: "Becario consultoría informática − Onligy Consulting",
+    company: "Onligy Consulting",
+    description:
+      "Becario en la consultoría informática de Onligy Consulting. Aprendí a administrar todo tipo de redes, controles de acceso a tratar con clientes y sobre mantenimiento de hardware.",
+  },
+  {
+    date: "Septiembre 2021 − junio 2023",
+    title: "Entrenador infantil − Entrenador Atletismo",
+    description: "Entrenador infantil de atletismo en club de atletismo.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
