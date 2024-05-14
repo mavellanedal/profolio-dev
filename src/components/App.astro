@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AboutMe from "../../components/AboutMe.astro";
+import BriefCaseIcon from "../../icons/BriefCaseIcon.astro";
+import LaptopIcon from "../../icons/LaptopIcon.astro";
+import Experience from "../../components/Experience.astro";
+import Projects from "../../components/Projects.astro";
+import ProfileIcon from "../../icons/ProfileIcon.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Hero from "../../components/Hero.astro";
+---
+
+<Layout
+  title="Porfolio Miquel Avellaneda - Especialista en Microsistemas Informáticos y Redes, además de Desarrollador Web"
+  description="Contrata a Miquel Avellaneda para controlar toda tu infraestructura informática y para desarrollar páginas y aplicaciones web. Administrador de Sistemas Microinformáticos y Redes y Desarrollador Web. Especializado en microsistemas informáticos y Redes y Desarrollador Web."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
+  </main>
+  <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <BriefCaseIcon class="size 7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <LaptopIcon class="size 7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileIcon class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+</Layout>

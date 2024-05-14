@@ -1,0 +1,55 @@
+---
+const personalImageAlt = "Miquel Avellaneda";
+import Badge from "./Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import SocialPill from "./SocialPill.astro";
+import PhoneIcon from "../icons/PhoneIcon.astro";
+import Github from "../icons/Github.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/perfil.webp"
+      alt={personalImageAlt}
+    />
+    <a
+      href="/public/CV_Miquel_Avellaneda.pdf"
+      download
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Descárgate mi CV</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, soy Miquel
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-blue-400 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    <strong
+      >Técnico de Microsistemas Informáticos y Redes, futuro Diseñador Web.</strong
+    > De Barcelona, Cataluña, España. <br /><br />Especializado en ofrecer la
+    mejor solución.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:miavluofficial@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/mavellaneda/">
+      <LinkedIn class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/mavellanedal">
+      <Github class="size-4" />
+      GitHub
+    </SocialPill>
+  </nav>
+</div>

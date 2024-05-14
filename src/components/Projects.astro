@@ -1,0 +1,136 @@
+---
+import HTMLicon from "../icons/HTMLicon.astro";
+import CSSicon from "../icons/CSSicon.astro";
+import GitHub from "../icons/Github.astro";
+import Link from "../icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import ArduinoIcon from "../icons/ArduinoIcon.astro";
+import GalleryButton from "./galleryButton.astro";
+import GameBoy from "./GameBoy.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#602110] text-white",
+    icon: HTMLicon,
+  },
+
+  CSS: {
+    name: "CSS",
+    class: "bg-[#103852] text-white",
+    icon: CSSicon,
+  },
+
+  Arduino: {
+    name: "arduino",
+    class: "bg-[#15e3ea] text-white",
+    icon: ArduinoIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Digitalización de fotos de la Game Boy Camera (1988)",
+    description:
+      "Elaboración de un programa que permite digitalizar imágenes de la Game Boy Camera, creada en 1988. Un aparato del que originalmente solo se podían imprimir las imágenes.",
+    link: "https://mavellanedal.github.io/labdoo-site/",
+    github: "https://github.com/mavellanedal/labdoo-site",
+    image: "/projects/GameBoy-project.webp",
+    tags: [TAGS.Arduino],
+    gallery: "#",
+  },
+
+  {
+    title: "Labdoo Site − La página web del proyecto de labdoo",
+    description:
+      "Diseño de una página web para el proyecto de síntesis de mi segundo año en sistemas microinformáticos y redes.",
+    link: "https://mavellanedal.github.io/labdoo-site/",
+    github: "https://github.com/mavellanedal/labdoo-site",
+    image: "/projects/labdoo-site.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+
+  {
+    title:
+      "Conciertos en Barcelona − Página web de los próximos conciertos en Barcelona",
+    description:
+      "Esta página web fue creada para una entrega de mi segundo año de Sistemas Microinformáticos y redes.",
+    link: "https://mavellanedal.github.io/Reto-2-m08/",
+    github: "https://github.com/mavellanedal/Reto-2-m08",
+    image: "/projects/concerts-site.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(
+      ({ image, title, description, tags, link, github, gallery }) => (
+        <>
+          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img
+                  alt="Imagen del proyecto"
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                  src={image}
+                />
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                {title}
+              </h3>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div class="mt-2 text-gray-700 dark:text-gray-400">
+                  {description}
+                </div>
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  {github && (
+                    <LinkButton href={github}>
+                      <GitHub class="size-6" />
+                      Code
+                    </LinkButton>
+                  )}
+                  {link && (
+                    <LinkButton href={link}>
+                      <Link class="size-4" />
+                      Preview
+                    </LinkButton>
+                  )}
+                  {gallery && <GalleryButton />}
+                </footer>
+              </div>
+            </div>
+          </article>
+          <GameBoy />
+        </>
+      )
+    )
+  }
+</div>
+
+<script>
+  const GalleryButton = document.getElementById("ButtonGallery");
+  const carouselContainer = document.getElementById("gallery");
+
+  GalleryButton.addEventListener("click", () => {
+    carouselContainer.classList.toggle("hidden");
+  });
+</script>

@@ -1,0 +1,30 @@
+---
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+    title="Design System porfolio.dev"
+    description="El catalogo de componentes de mi profolio"
+>
+    <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+        <article class="mb-10">
+            <h1 class="mb-4 text-x1 font-semibold">&lt;Badge /&gt;</h1>
+            <Badge>Disponible para trabjar</Badge>
+        </article>
+
+        <article class="mb-10">
+            <h1 class="mb-4 text-xl font-semibold">&lt SocialPill /&gt;</h1>
+
+            <div class="flex">
+                <SocialPill hrref="https://www.linkedin.com/in/miquel-avellaneda-luque-07086a2bb">
+                    <LinkedInIcon class="size-4 md:size-6" />
+                </SocialPill>
+            </div>
+        </article>
+    </SectionContainer>
+</Layout>

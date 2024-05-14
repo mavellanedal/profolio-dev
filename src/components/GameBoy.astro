@@ -1,0 +1,90 @@
+---
+import "photoswipe/style.css"
+
+const IMAGES = [
+  {
+    webpImage: "/Gallery/img-1.webp",
+    Image: "/Gallery/img-1.jpeg",
+    title: 'Imagen del circuito',
+    alt: 'Imagen del circito para sacar las imagenes',
+    width: '1926',
+    height: '2560',
+  },
+  {
+    webpImage: "/Gallery/img-2.webp",
+    Image: "/Gallery/img-2.jpeg",
+    title: 'Pantalla de la GameBoy',
+    alt: 'Imagen de la GameBoy Camera en la pantalla de la GameBoy',
+    width: '1926',
+    height: '2560',
+  },
+  {
+    webpImage: "/Gallery/img-3.webp",
+    Image: "/Gallery/img-3.jpeg",
+    title: 'Pantalla de la GameBoy',
+    alt: 'Imagen de la GameBoy Camera en la pantalla de la GameBoy',
+    width: '1926',
+    height: '2560',
+  },
+  {
+    webpImage: "/Gallery/img-4.webp",
+    Image: "/Gallery/img-4.jpeg",
+    title: 'Imagen exportada de la GameBoy - Resultado 1',
+    alt: 'Imagen exportada de la GameBoy',
+    width: '480',
+    height: '432',
+  },
+  {
+    webpImage: "/Gallery/img-5.webp",
+    Image: "/Gallery/img-5.jpeg",
+    title: 'Imagen exportada de la GameBoy - Resultado 2',
+    alt: 'Imagen exportada de la GameBoy',
+    width: '480',
+    height: '432',
+  },
+  {
+    webpImage: "/Gallery/img-6.webp",
+    Image: "/Gallery/img-6.jpeg",
+    title: 'Imagen exportada de la GameBoy - Resultado 3',
+    alt: 'Imagen exportada de la GameBoy',
+    width: '480',
+    height: '432',
+  },
+]
+---
+
+<div class="grid grid-cols-3 max-w-6xl gap-4 mx-auto py-15 hidden" id="gallery">
+  {
+    
+    IMAGES.map(({title, alt, width, height, webpImage, Image}) => (
+      <a 
+        class="rounded-xl border border-gray-600 hover:border-gray-900 hover:scale-105 transition-all h-max"
+        href={Image}
+        target="_blank"
+        data-pswp-width= {width}
+        data-pswp-height = {height}
+      >
+        <img 
+          title={title}
+          class="rounded-xl shadow-xl sm:h-auto" 
+          loading="lazy"
+          src={webpImage}
+          alt={alt}
+        />
+      </a>
+    ))
+  
+  }
+</div>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe')
+      });
+
+    lightbox.init();
+</script>
