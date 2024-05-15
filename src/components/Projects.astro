@@ -8,6 +8,8 @@ import ArduinoIcon from "../icons/ArduinoIcon.astro";
 import GalleryButton from "./galleryButton.astro";
 import GameBoy from "./GameBoy.astro";
 
+const { currentLocale = "es" } = Astro;
+
 const TAGS = {
   HTML: {
     name: "HTML",
@@ -30,9 +32,16 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "Digitalización de fotos de la Game Boy Camera (1988)",
-    description:
-      "Elaboración de un programa que permite digitalizar imágenes de la Game Boy Camera, creada en 1988. Un aparato del que originalmente solo se podían imprimir las imágenes.",
+    title: {
+      es: "Digitalización de fotos de la Game Boy Camera (1988)",
+      en: "Digitalization of photos from Game Boy Camera (1988)",
+      ca: "Digitalització de fotos de la Game Boy Camera (1988)",
+    }[currentLocale],
+    description: {
+      es: "Elaboración de un programa que permite digitalizar imágenes de la Game Boy Camera, creada en 1988. Un aparato del que originalmente solo se podían imprimir las imágenes.",
+      en: "Development of a program that allows you to digitize images from the Game Boy Camera, created in 1988. A device from which only images could originally be printed.",
+      ca: "Elaboració d'un programa que permet digitalitzar imatges de la Game Boy Camera, creada al 1988. Un aparell del que originalment només es podien imprimir les imatges.",
+    }[currentLocale],
     link: "https://mavellanedal.github.io/labdoo-site/",
     github: "https://github.com/mavellanedal/labdoo-site",
     image: "/projects/GameBoy-project.webp",
@@ -41,9 +50,16 @@ const PROJECTS = [
   },
 
   {
-    title: "Labdoo Site − La página web del proyecto de labdoo",
-    description:
-      "Diseño de una página web para el proyecto de síntesis de mi segundo año en sistemas microinformáticos y redes.",
+    title: {
+      es: "Labdoo Site − La página web del proyecto de labdoo",
+      en: "Labdoo Site − The website of the labdoo project",
+      ca: "Labdoo Site − La pàgina web del projecte de labdoo",
+    }[currentLocale],
+    description: {
+      es: "Diseño de una página web para el proyecto de síntesis de mi segundo año en sistemas microinformáticos y redes.",
+      en: "Desing of a website for the synthesis project of my second year in microcomputer systems and networks.",
+      ca: "Disseny d'una pàgina web per al projecte de síntesi del meu segon any en sistemes microinformàtics i xarxes.",
+    }[currentLocale],
     link: "https://mavellanedal.github.io/labdoo-site/",
     github: "https://github.com/mavellanedal/labdoo-site",
     image: "/projects/labdoo-site.webp",
@@ -51,10 +67,16 @@ const PROJECTS = [
   },
 
   {
-    title:
-      "Conciertos en Barcelona − Página web de los próximos conciertos en Barcelona",
-    description:
-      "Esta página web fue creada para una entrega de mi segundo año de Sistemas Microinformáticos y redes.",
+    title: {
+      es: "Conciertos en Barcelona − Página web de los próximos conciertos en Barcelona",
+      en: "Concerts in Barcelona − Website of the upcoming concerts in Barcelona",
+      ca: "Concerts a Barcelona − Pàgina web dels propers concerts a Barcelona",
+    }[currentLocale],
+    description: {
+      es: "Esta página web fue creada para una entrega de mi segundo año de Sistemas Microinformáticos y redes.",
+      en: "This website was created for a delivery of my second year of Microcomputer Systems and Networks.",
+      ca: "Aquesta pàgina web va ser creada per a una entrega del meu segon any de Sistemes Microinformàtics i Xarxes.",
+    }[currentLocale],
     link: "https://mavellanedal.github.io/Reto-2-m08/",
     github: "https://github.com/mavellanedal/Reto-2-m08",
     image: "/projects/concerts-site.webp",

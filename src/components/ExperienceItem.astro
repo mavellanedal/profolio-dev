@@ -2,12 +2,17 @@
 import LinkInline from "./LinkInline.astro";
 
 interface Props {
-  title: string;
+  title?: string;
   company?: string;
-  description: string;
+  description?: string;
   link?: string;
-  date: string;
+  date?: string;
 }
+
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
 
 const { title, company, description, link, date } = Astro.props;
 ---
@@ -40,7 +45,7 @@ const { title, company, description, link, date } = Astro.props;
     {
       link && (
         <LinkInline href={link}>
-          Saber más{" "}
+          {i18n.LINKEXPERIENCE}{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-5 icon icon-tabler icon-tabler-chevron-right"

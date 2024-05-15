@@ -1,30 +1,65 @@
 ---
-import Link from "../icons/Link.astro";
 import ExperienceItem from "./ExperienceItem.astro";
 
-import { getI18n } from "../i18n/";
-
 const { currentLocale = "es" } = Astro;
-const i18n = getI18n({ currentLocale });
 const EXPERIENCIE = [
   {
-    date: "Diciembre 2023 − marzo 2024",
-    title: "Consultor informático − Onligy Consulting",
+    date: {
+      es: "Diciembre 2023 − marzo 2024",
+      en: "December 2023 − March 2024",
+      ca: "Desembre 2023 − març 2024",
+    }[currentLocale],
+    title: {
+      es: "Consultor informático − Onligy Consulting",
+      en: "Computer consultant − Onligy Consulting",
+      ca: "Consultor informàtic − Onligy Consulting",
+    }[currentLocale],
     company: "Onligy Consulting",
-    description:
-      "Posteriormente a la FP fui contratado en la empresa para administrar servidores, redes, hoteleras, bases de datos y páginas web.",
+    description: {
+      es: "Posteriormente a la FP fui contratado en la empresa para administrar servidores, redes, hoteleras, bases de datos y páginas web.",
+      en: "After the FP I was hired by the company to manage servers, networks, hoteliers, databases and websites.",
+      ca: "Posteriorment al FP vaig ser contractat per l'empresa per administrar servidors, xarxes, hoteleres, bases de dades i pàgines web.",
+    }[currentLocale],
   },
   {
-    date: "Julio 2023 − diciembre 2023",
-    title: "Becario consultoría informática − Onligy Consulting",
+    date: {
+      es: "Julio 2023 − diciembre 2023",
+      en: "July 2023 − December 2023",
+      ca: "Juliol 2023 − desembre 2023",
+    }[currentLocale],
+    title: {
+      es: "Becario consultoría informática − Onligy Consulting",
+      en: "Computer consulting intern − Onligy Consulting",
+      ca: "Becari consultoria informàtica − Onligy Consulting",
+    }[currentLocale],
     company: "Onligy Consulting",
-    description:
-      "Becario en la consultoría informática de Onligy Consulting. Aprendí a administrar todo tipo de redes, controles de acceso a tratar con clientes y sobre mantenimiento de hardware.",
+    description: {
+      es: "Becario en la consultoría informática de Onligy Consulting. Aprendí a administrar todo tipo de redes, controles de acceso a tratar con clientes y sobre mantenimiento de hardware.",
+      en: "Intern in the computer consulting of Onligy Consulting. I learned to manage all types of networks, access controls to deal with clients and about hardware maintenance.",
+      ca: "Becari en la consultoria informàtica de Onligy Consulting. Vaig aprendre a administrar tot tipus de xarxes, controls d'accés a tractar amb clients i sobre manteniment de maquinari.",
+    }[currentLocale],
   },
   {
-    date: "Septiembre 2021 − junio 2023",
-    title: "Entrenador infantil − Entrenador Atletismo",
-    description: "Entrenador infantil de atletismo en club de atletismo.",
+    date: {
+      es: "Septiembre 2021 − junio 2023",
+      en: "September 2021 − June 2023",
+      ca: "Setembre 2021 − juny 2023",
+    }[currentLocale],
+    title: {
+      es: "Entrenador infantil − Entrenador Atletismo",
+      en: "Children's coach − Athletics Coach",
+      ca: "Entrenador infantil − Entrenador Atletisme",
+    }[currentLocale],
+    company: {
+      es: "Escuela de Atletismo",
+      en: "Athletics School",
+      ca: "Escola d'Atletisme",
+    }[currentLocale],
+    description: {
+      es: "Entrenador de atletismo en la escuela de atletismo de mi ciudad. Me encargaba de enseñar a los niños y niñas de entre 6 y 12 años a correr, saltar y lanzar.",
+      en: "Athletics coach at the athletics school in my city. I was in charge of teaching children between 6 and 12 years old to run, jump and throw.",
+      ca: "Entrenador d'atletisme a l'escola d'atletisme de la meva ciutat. Em feia càrrec d'ensenyar als nens i nenes de 6 a 12 anys a córrer, saltar i llançar.",
+    }[currentLocale],
   },
 ];
 ---

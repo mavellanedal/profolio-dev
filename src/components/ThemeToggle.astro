@@ -3,6 +3,11 @@ import SunIcon from "../icons/SunIcon.astro";
 import MoonIcon from "../icons/MoonIcon.astro";
 import SystemIcon from "../icons/SystemIcon.astro";
 
+import { getI18n } from "../i18n/";
+
+const { currentLocale = "es" } = Astro;
+const i18n = getI18n({ currentLocale });
+
 const THEMES = ["Light", "Dark", "System"];
 ---
 
@@ -11,7 +16,7 @@ const THEMES = ["Light", "Dark", "System"];
     id="theme-toggle-btn"
     class="appearance-none border-none flex hover:scale-125 transition"
   >
-    <span class="sr-only">Elige el tema</span>
+    <span class="sr-only">{i18n.THEMTOGGLE}</span>
     <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
     <MoonIcon
       id="dark"

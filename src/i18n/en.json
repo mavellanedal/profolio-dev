@@ -1,7 +1,7 @@
 {
-    "SEOTITLE": "Porfolio Miquel Avellaneda - Specialist in Computer Systems and Networks, and Web Developer",
+    "SEOTITLE": "Portfolio Miquel Avellaneda - Specialist in Computer Systems and Networks, and Web Developer",
     "SEODESCRIPTION": "Miquel Avellaneda is a specialist in Computer Systems and Networks, and Web Developer. He has a lot of experience in the field of computer science and web development.",
-    "EXPERIENCETITLE": "Laboral Experience",
+    "EXPERIENCETITLE": "Work Experience",
     "PROJECTSTITLE": "Projects",
     "ABOUTMETITLE": "About me",
     "CVTITLE": "Download my CV",
@@ -31,22 +31,13 @@
     "ABOUTMETEXT15": "One of my most interesting personal works is",
     "ABOUTMETEXT16": " programming through an Arduino to digitize images from the Game",
     "ABOUTMETEXT17":" One machine that originally could only print images. With this experiment, I have been able to collaborate with photographers to create different and original content.",
-    "EXPERINECEDATE1": "December 2023 − March 2024",
-    "EXPERINECETITLE1": "Computer consultant − Onligy Consulting",
-    "EXPERIENCECOMPANY1": "Onligy Consulting",
-    "EXPERIENCEDESCRIPTION1": "After the FP I was hired by the company to manage servers, networks, hotels, databases and web pages.",
-    "EXPERINECEDATE2": "July 2023 − December 2023",
-    "EXPERINECETITLE2": "Computer consulting intern − Onligy Consulting",
-    "EXPERIENCECOMPANY2": "Onligy Consulting",
-    "EXPERIENCEDESCRIPTION2": "Intern in the computer consulting of Onligy Consulting. I learned to manage all types of networks, access controls to deal with clients and about hardware maintenance.",
-    "EXPERINECEDATE3": "September 2021 − June 2023",
-    "EXPERINECETITLE3": "Children's coach − Athletics Coach",
-    "EXPERIENCEDESCRIPTION3": "Athletics Coach",
     "FOOTERTEXT":". Almost all rights reserved",
     "FOOTERLINK1":"Home",
     "FOOTERLINK2":"Contact",
     "GALLERYBUTTON":"Show Gallery",
-    "IDIOMTHOGLE":"Chose the language"
+    "IDIOMTHOGLE":"Chose the language",
+    "LINKEXPERIENCE": "Learn more",
+    "THEMTOGGLE": "Choose the theme"
 
     
 }

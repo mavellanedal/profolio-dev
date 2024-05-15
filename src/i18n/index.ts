@@ -2,7 +2,7 @@ import catalan from './ca.json';
 import english from './en.json';
 import spanish from './es.json';
 
-const LANGUAGES = { 
+export const LANGUAGES = { 
     CATALAN: 'ca',
     ENGLISH: 'en',
     SPANISH: 'es'
