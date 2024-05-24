@@ -1,25 +1,42 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import IdiomToggle from "./IdiomToggle.astro";
+const { currentLocale = "es" } = Astro;
 
 const navItems = [
   {
-    title: "Experiencia",
+    title: {
+      es: "Experiencia",
+      en: "Experience",
+      ca: "Experiència",
+    }[currentLocale],
     label: "experiencia",
     url: "/#experiencia",
   },
   {
-    title: "Proyectos",
+    title: {
+      es: "Proyectos",
+      en: "Projects",
+      ca: "Projectes",
+    }[currentLocale],
     label: "proyectos",
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
+    title: {
+      es: "Sobre mí",
+      en: "About me",
+      ca: "Sobre mi",
+    }[currentLocale],
     label: "sobre-mi",
     url: "/#sobre-mi",
   },
   {
-    title: "Contacto",
+    title: {
+      es: "Contacto",
+      en: "Contact",
+      ca: "Contacte",
+    }[currentLocale],
     label: "contacto",
     url: "mailto:miduga@gmail.com",
   },
