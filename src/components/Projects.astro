@@ -7,6 +7,7 @@ import LinkButton from "./LinkButton.astro";
 import ArduinoIcon from "../icons/ArduinoIcon.astro";
 import GalleryButton from "./galleryButton.astro";
 import GameBoy from "./GameBoy.astro";
+import Cicon from "../icons/Cicon.astro";
 
 const { currentLocale = "es" } = Astro;
 
@@ -27,6 +28,11 @@ const TAGS = {
     name: "arduino",
     class: "bg-[#15e3ea] text-white",
     icon: ArduinoIcon,
+  },
+  C: {
+    name: "C",
+    class: "bg-[#15e3ea] text-white",
+    icon: Cicon,
   },
 };
 
@@ -80,8 +86,22 @@ const PROJECTS = [
     link: "https://mavellanedal.github.io/Reto-2-m08/",
     github: "https://github.com/mavellanedal/Reto-2-m08",
     image: "/projects/concerts-site.webp",
-    tags: [TAGS.HTML, TAGS.CSS],
+    tags: [TAGS.HTML, TAGS.CSS]
   },
+  {
+    title: {
+      es: "Mi propia biblioteca de funciones para C",
+      en: "My own library of functions for C",
+      ca: "La meva pròpia biblioteca de funcions per a C",
+    }[currentLocale],
+    description: {
+      es: "Creación de una biblioteca de funciones en C con las funciones más utilizadas en la programación de sistemas.",
+      en: "Creation of a library of functions in C with the most used functions in systems programming.",
+      ca: "Creació d'una biblioteca de funcions en C amb les funcions més utilitzades en la programació de sistemes.",
+    }[currentLocale],
+    gtihub: "https://mavellanedal.github.io/libft/",
+    tags: [TAGS.C]
+  }
 ];
 ---
 

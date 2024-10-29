@@ -6,7 +6,7 @@
     "ABOUTMETITLE": "About me",
     "CVTITLE": "Download my CV",
     "HEROTITLE": "Hey, I'm Miquel",
-    "HEROTEXT1": "Computer Systems and Networks Technician, future Web Designer.",
+    "HEROTEXT1": "Computer Systems and Networks Technician, future Web Designer and campus 42 Barcelona student.",
     "HEROTEXT2": "From Barcelona, Catalonia, Spain.",
     "HEROTEXT3": "Specialized in offering the best solution.",
     "CONTACTTITLE": "Contact me",
@@ -14,8 +14,8 @@
     "HEDERTILE2": "Projects",
     "HEDERTILE3": "About me",
     "HEDERTILE4": "Contact",
-    "ABOUTMETEXT1": "I started in computer science when I was very young, when I was 10 years old. Currently, I am",
-    "ABOUTMETEXT2": "finishing a cycle of computer systems and networks",
+    "ABOUTMETEXT1": "I started in computer science when I was very young, when I was 10 years old. Currently, I have",
+    "ABOUTMETEXT2": "finished a cycle of computer systems and networks, I am studying a cycle in web application design and I am learning to program in C at campus 42 Barcelona.",
     "ABOUTMETEXT3": "to later do a cycle of web application design.",
     "ABOUTMETEXT4": "Of many of the projects I have done in my time as a student of microsystems, I want to emphasize:",
     "ABOUTMETEXT5": "Assembly of a computer",
@@ -31,6 +31,7 @@
     "ABOUTMETEXT15": "One of my most interesting personal works is",
     "ABOUTMETEXT16": " programming through an Arduino to digitize images from the Game",
     "ABOUTMETEXT17":" One machine that originally could only print images. With this experiment, I have been able to collaborate with photographers to create different and original content.",
+    "ABOUTMETEXT18": "I am currently doing the 42 Barcelona campus, where I am learning to program in C and to be more self-taught",
     "FOOTERTEXT":". Almost all rights reserved",
     "FOOTERLINK1":"Home",
     "FOOTERLINK2":"Contact",
@@ -39,5 +40,5 @@
     "LINKEXPERIENCE": "Learn more",
     "THEMTOGGLE": "Choose the theme"
 
-    
+
 }
