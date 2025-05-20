@@ -1,9 +1,7 @@
 # 👨🏻‍💻 ESTE ES MI PORFOLIO
 
 <div align="center">
-<a href="https://mavellaneda.me">
 <img src="./public/porfolio.webp">
-</a>
 <p></p>
 </div>
 
